@@ -2,12 +2,18 @@
 
 This guide provides a complete walkthrough of setting up and using the email sending system. The key benefits of this approach are:
 
+You cannot send an email through CloudFlare facilities. You are able to recieve emails associated to your domain. After much reasearch this is the lightest weight way to implement what should have been a trival task.
+
+
 Simplicity: No need to maintain your own email server
 Reliability: Resend.com handles delivery and scaling
 Deliverability: Professional email infrastructure reduces chances of spam filtering
 Cost-effective: Free tier available for testing and low-volume usage
 
 # Resend.com Email Integration Setup Guide
+
+![image](https://github.com/user-attachments/assets/fd603f42-5f18-43fd-af0a-28c202d7d854)
+
 
 ## Overview
 This guide covers setting up a complete email sending system using Resend.com, Cloudflare, and Python. The solution enables sending emails from your custom domain using Resend.com's SMTP service.
@@ -43,6 +49,16 @@ This guide covers setting up a complete email sending system using Resend.com, C
    ```
 6. Add DKIM record (you'll get this from Resend.com after registration)
 
+
+![image](https://github.com/user-attachments/assets/7a04d683-5cc0-43db-947d-d6f310385534)
+
+You have will existing MX and TXT records associated with the ingress email settings these do not need to be changed.
+
+![image](https://github.com/user-attachments/assets/a3b15606-2205-4dd6-a370-9d5a0f1cb9fc)
+
+
+
+
 ## Step 2: Resend.com Setup
 
 1. Sign up at [Resend.com](https://resend.com)
@@ -51,10 +67,15 @@ This guide covers setting up a complete email sending system using Resend.com, C
    - Click "Add Domain"
    - Enter your domain name
    - Follow the verification process
+ 
+ ![image](https://github.com/user-attachments/assets/fdfc4ec6-134c-46a4-a1ba-4029f893e140)
+     
 4. Get your API credentials:
    - Go to API Keys section
    - Generate a new API key
    - Save the key securely (you'll need it for SMTP_USER and SMTP_PASSWORD)
+
+![image](https://github.com/user-attachments/assets/ec11b220-d906-40d4-91a4-4c0723968fab)
 
 ## Step 3: Local Development Setup
 
@@ -87,6 +108,7 @@ SMTP_PORT=587
 SMTP_USER=your_resend_api_key
 SMTP_PASSWORD=your_resend_api_key
 ```
+![Screenshot 2024-10-31 at 8 00 43 PM](https://github.com/user-attachments/assets/a43b971a-e0ac-4db4-8279-cce8f623cc22)
 
 ## Step 4: Code Implementation
 
