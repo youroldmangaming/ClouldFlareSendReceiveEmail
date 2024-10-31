@@ -49,15 +49,11 @@ This guide covers setting up a complete email sending system using Resend.com, C
    ```
 6. Add DKIM record (you'll get this from Resend.com after registration)
 
-
-![image](https://github.com/user-attachments/assets/7a04d683-5cc0-43db-947d-d6f310385534)
+![image](https://github.com/user-attachments/assets/607989a7-dc37-456d-9741-9e0ef6a305f4)
 
 You have will existing MX and TXT records associated with the ingress email settings these do not need to be changed.
 
 ![image](https://github.com/user-attachments/assets/a3b15606-2205-4dd6-a370-9d5a0f1cb9fc)
-
-
-
 
 ## Step 2: Resend.com Setup
 
