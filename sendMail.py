@@ -13,8 +13,8 @@ smtp_host = os.getenv("SMTP_HOST")
 smtp_port = os.getenv("SMTP_PORT")
 smtp_user = os.getenv("SMTP_USER")  # Your Gmail address
 smtp_password = os.getenv("SMTP_PASSWORD")  # Your Gmail App Password
-from_email = "admin@youroldmangaming.com"
-to_email = "wilsomrm2@yahoo.com" # Or any email you want to test with
+from_email = "ad@youroldmangaming.com"
+to_email = "wi@yahoo.com" # Or any email you want to test with
 
 def send_test_email():
     # Create message
